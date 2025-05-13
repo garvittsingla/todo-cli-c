@@ -18,27 +18,24 @@ int helperfunction(){
     printf("6. --exit to exit the app\n");
 }
 
-void displaytodos(){
+int displaytodos(){
     FILE *fp;
     fp = fopen("todo.txt", "r");
      if (fp == NULL) {
         printf("Error opening file for reading.\n");
-        return ;
+        return 1;
     }
 
-    char line[200];
-    printf("Testing");
-    printf("Reading from file:\n");
-    int current_line = 1;
-     while (fgets(line, sizeof(line), fp)) {
-        if (current_line == 1) {
-            printf("Line %d: %s", 1, line);
-            fclose(fp);
-            return;
-        }
-        current_line++;
-    }
+    char line[100];
 
+    printf("Your current Todos are:\n");
+    printf("=======================\n");
+    while (fgets(line, sizeof(line), fp)) {
+        printf("%s", line);
+    }
+    printf("\n");
+    printf("=======================\n");
+    printf("\n");
 
     fclose(fp);
 }
