@@ -1,2 +1,2 @@
-1 "go gym" false
-2 "eat food" false
+1 go gym false
+2 eat food false
