@@ -27,7 +27,7 @@ void displaytodos(){
     }
 
     char line[200];
-
+    printf("Testing");
     printf("Reading from file:\n");
     int current_line = 1;
      while (fgets(line, sizeof(line), fp)) {
